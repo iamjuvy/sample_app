@@ -25,7 +25,8 @@ class User < ActiveRecord::Base
 
   def feed
 	#This is preliminary.
-        Micropost.where("user_id = ?", id)
+        #Micropost.where("user_id = ?", id)
+        #Micropost.paginate
   end
 
   private
