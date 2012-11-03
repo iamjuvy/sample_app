@@ -2,7 +2,8 @@
   <%= render 'shared/error_messages', object: f.object %>
   
   <div class="field">
-    <%= f.text_field :subject, placeholder: "Enter subject..." %>
+    <!--<%= f.text_field :subject, placeholder: "Enter subject..." %>-->
+    <%= f.text_field :subject, :autocomplete => microposts_autocomplete_micropost_subject_path %> 
     <%= f.text_area :content, placeholder: "Compose new micropost..." %>
   </div>
   <%= f.submit "Post", class: "btn btn-large btn-primary" %>

@@ -4,6 +4,8 @@ SampleApp::Application.routes.draw do
   resources :microposts, only: [:create, :destroy]
   #get "users/new"
 
+  get 'microposts/autocomplete_micropost_subject'
+
   root to: 'static_pages#home'
  
   match '/signup', to: 'users#new'
